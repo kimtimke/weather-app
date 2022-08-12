@@ -4,11 +4,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8804418e8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Wireframe HTML/CSS</title>
+    
   </head>
-  <body>
-    <h1>Hello World</h1>
-    <script src="app.js"></script>
+  <body class="content">
+    <br />
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div>
+            <h1 id="temperature">
+              <span id="tempValue">25</span>             
+              <span class="units">
+                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>    
+            </h1>
+             <h2>
+              <div>
+              <span id="city">Windhoek</span>
+              </div>
+              </h2>
+            <div class="row">
+              <div class="col-6">
+                <ul>
+                  <li id="time"></li>
+                  <li>sunny</li>
+                </ul>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li id="precipitation">Precipitation: 0%</li>
+                <li id="humidity">Humidity: 20%</li>
+                <li id="wind">Wind: 20km/h</li>
+              </ul>
+            </div>
+          </div>
+
+          <form class = "search-form" id="search-form">
+            <input type="search"  id="city-input" placeholder="Enter city here" autofocus class="form-control"/>
+
+            <button id= "city-button" type="button" class="btn btn-primary">Search</button>
+            <button id="current-button" type="button" class="btn btn-success">Current</button>
+          </form>
+          <br />
+
+          <div class="container2">
+            <div class="row align-items-start days">
+              <div class="col">Tuesday</div>
+              <div class="col">Wednesday</div>
+              <div class="col">Thursday</div>
+              <div class="col">Friday</div>
+              <div class="col">Saturday</div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <i class="fa-solid fa-cloud-rain cloud1"></i>
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-cloud-sun-rain cloud1"></i>
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-cloud-rain cloud1"></i>
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-cloud-showers-heavy cloud1"></i>
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-cloud-sun-rain cloud1"></i>
+              </div>
+            </div>
+            <div class="row align-items-end temperature">
+              <div class="col">25°C</div>
+              <div class="col">24°C</div>
+              <div class="col">25°C</div>
+              <div class="col">23°C</div>
+              <div class="col">26°C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
